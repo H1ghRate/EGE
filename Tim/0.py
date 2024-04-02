@@ -1,7 +1,31 @@
-a = 23
+a = int(input('First number: '))
 
-b = 32
+b = int(input('Second number: '))
 
 s = a + b
 
-print('fdsdfsdf sd fsdf sdf sf sd fsfsf sd fsd fs')
+print('Summa')
+print(a, '+', b, '=', s)
+
+s = a - b
+
+print('Raznost')
+print(a, '-', b, '=', s)
+
+s = b - a
+
+print(b, '-', a, '=', s)
+
+s = a * b
+
+print('Product')
+print(a, '*', b, '=', s)
+
+s = a / b
+
+print('Delim')
+print(a, '/', b, '=', s)
+
+s = b / a
+
+print(b, '/', a, '=', s)
