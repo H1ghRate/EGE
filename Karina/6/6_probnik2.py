@@ -7,6 +7,8 @@ tracer(0)
 
 screensize(12000, 12000)
 
+left(90)
+
 for _ in range(10):
     right(120)
     forward(m * 10)
