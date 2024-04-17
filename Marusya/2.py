@@ -1,7 +1,10 @@
-s = 'dsf324fdsfaasdfg'
+a = 2
 
-i = 0
+while True:
+    print(a ** a)
 
-while (x := s[i]).isalpha():
-    print(x)
-    i += 1
+    a -= 1
+
+    if not (a > 3):
+        break
+
