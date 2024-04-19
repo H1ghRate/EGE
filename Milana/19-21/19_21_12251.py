@@ -29,7 +29,7 @@ for s in range(MIN_VALUE, MAX_VALUE + 1):
         a[s] = 'W'
     elif any(a[m] == 'W' for m in moves(s)):
         a[s] = 'B1'
-    elif any(a[m] == 'B1' for m in moves(s)):
+    elif all(a[m] == 'B1' for m in moves(s)):
         a[s] = 'L1'
     elif any(a[m] == 'L1' for m in moves(s)):
         a[s] = 'B2'

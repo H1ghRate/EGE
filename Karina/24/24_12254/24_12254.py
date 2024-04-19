@@ -14,12 +14,20 @@ for i in s:
 
         rsq = 0
     
-s = s.replace('*' * max_rsq, '!')
+s = s.replace('*' * (max_rsq - 1), '!')
 
 ans = 0
 
+# SQ!RS
+
 for i in zip(s, s[1:], s[2:], s[3:], s[4:]):
     if i[2] == '!':
-        ans = max(ans, max_rsq * 3 + (i[0] == 'S') + (i[1] == 'Q') + (i[3] == 'R') + (i[4] == 'S'))
+        left = i[1] == 'Q'
+        left = left * (i[0] == 'S') + left
+
+        right = i[3] == 'R'
+        right = right * (i[3] == 'S') + right
+
+        ans = max(ans, max_rsq * 3 + left + right)
 
 print(ans)
