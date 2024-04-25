@@ -1,8 +1,8 @@
-s = open('./24_12410/24_12410.txt').readline()
+s = open('./24/24_12410/24_12410.txt').readline()
 
 st = end = 1
 
-l_max = 0
+l_max = 1
 
 errors = 0
 
