@@ -1,0 +1,49 @@
+from functools import lru_cache
+
+TO_WIN_VALUE = 301
+MAX_VALUE = 300
+MIN_VALUE = 1
+
+TO_PLUS = [3]
+TO_PRODUCT = [5]
+
+
+def moves(n):
+    variants = []
+
+    for move in TO_PLUS:
+        variants.append(n + move)
+
+    for move in TO_PRODUCT:
+        variants.append(n * move)
+
+    return variants
+
+
+@lru_cache(None)
+def game(n):
+    if n >= TO_WIN_VALUE:
+        return 'W'
+    if any(game(m) == 'W' for m in moves(n)):
+        return 'B1'
+    if all(game(m) == 'B1' for m in moves(n)):
+        return 'L1'
+    if any(game(m) == 'L1' for m in moves(n)):
+        return 'B2'
+    if all(game(m) == 'B1' or game(m) == 'B2' for m in moves(n)):
+        return 'L2'
+    if any(game(m) == 'L2' for m in moves(n)):
+        return 'B3'
+
+finals = {'B1': 0, 'L1': 0, 'B2': 0, 'L2': 0, 'B3': 0}
+
+for s in range(MAX_VALUE, MIN_VALUE - 1, -1):
+    res = game(s)
+
+    if res == None:
+        continue
+
+    finals[res] += 1
+
+print(finals)
+    

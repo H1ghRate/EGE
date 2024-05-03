@@ -9,6 +9,8 @@ s_max = [(0, 0)] * 113
 
 s_min = [(1e15, 1e15)] * 113
 
+s_min[0] = (0, 0)
+
 s = 0 
 
 for i in range(n):
