@@ -1,7 +1,8 @@
-a = 3
+print('Product of two numbers.')
+a = int(input('a = '))
 
-b = 4
+b = int(input('b = '))
 
-c = a + b
+c = a // b
 
-print(c)
+print(f'{a} * {b} = {c}')
