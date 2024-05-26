@@ -1,4 +1,4 @@
-with open('./26_9793/26_9793.txt') as f:
+with open('./26_9793.txt') as f:
     n = int(f.readline())
 
     a = []
