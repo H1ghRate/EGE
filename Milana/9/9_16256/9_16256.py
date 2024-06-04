@@ -1,4 +1,4 @@
-with open('./9_16256/9_16256.csv') as f:
+with open('./9_16256.csv') as f:
     last_s = 0
 
     for i in f:
