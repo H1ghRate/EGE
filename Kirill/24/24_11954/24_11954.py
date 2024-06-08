@@ -25,3 +25,5 @@ for si in s.split('Y'):
             l_min = min(l_min, end - st)
 
 print(l_min)
+
+'AAASBXSDFDSFXSDFSDFXFSDFSD'
